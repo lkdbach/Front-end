@@ -6,3 +6,4 @@ const rootReducer = combineReducers({
 
 export default rootReducer;
 //chet me may di
+asdqwdasdqwdasdasdqwd
