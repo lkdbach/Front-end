@@ -9,7 +9,7 @@ import {createPost} from "../actions";
 
 
 class PostsNew extends Component {
-    renderField(field) {
+    static renderField(field) {
         const {meta: {touched, error}} = field;
         const className = `form-group ${ touched && error ? 'has-danger' : '' }`;
         return (
@@ -38,17 +38,17 @@ class PostsNew extends Component {
                 <Field
                     label="Title For Post"
                     name="title"
-                    component={ this.renderField }
+                    component={ PostsNew.renderField }
                 />
                 <Field
                     label="Categories"
                     name="categories"
-                    component={ this.renderField }
+                    component={ PostsNew.renderField }
                 />
                 <Field
                     label="Post Content"
                     name="content"
-                    component={ this.renderField }
+                    component={ PostsNew.renderField }
                 />
                 <button type="submit" className="btn btn-primary"> Submit</button>
                 <Link to="/" className="btn btn-danger">Cancel</Link>
